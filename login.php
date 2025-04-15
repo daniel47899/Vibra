@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
         <p>Entrar</p>
         <p>Ou entre usando seu E-mail</p>
 
-        <form action="/Login" method="POST">
+        <form action="login.php" method="POST">
             <label for="email-login">E-mail:</label>
             <input type="email" id="email-login" name="email" required placeholder="Digite seu E-mail:">
 
