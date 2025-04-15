@@ -1,3 +1,21 @@
+<?php
+if (isset($_POST['submit'])) {
+  print_r('Nome: ' . $_POST['nome']);
+  print_r('<br>');
+  print_r('Email: ' . $_POST['email']);
+  print_r('<br>');
+  print_r('Senha: ' . $_POST['senha']);
+  print_r('<br>');
+
+  include_once('config.php');
+
+  $nome = $_POST['nome'];
+  $email = $_POST['email'];
+  $senha = $_POST['senha'];
+
+  $result = mysqli_query($conexao, "INSERT INTO usuario(nome, email, senha) VALUES('$nome', '$email', '$senha')");
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,6 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
+    
 <body>
 
     <header>
