@@ -1,16 +1,15 @@
 <?php
 
-$dbHost = 'localhost'; 
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'Form_login';
+$dbhost = 'localhost';
+$dbusername = 'root';
+$dbpassword = '';
+$dbnome = 'bd_vibecultural';
 
-$conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+$conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbnome);
 
-if ($conexao->connect_errno) {
-    echo "Erro na conexão: " . $conexao->connect_error;
+if ($conn->connect_error) {
+    echo "Erro na conexão: " . $conn->connect_error;
 } else {
-    echo "A conexão foi realizada com sucesso.";
+    //echo "Conectado com sucesso!";//
 }
-
 ?>
