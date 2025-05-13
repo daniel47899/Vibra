@@ -3,7 +3,7 @@
 $dbhost = 'localhost';
 $dbusername = 'root';
 $dbpassword = '';
-$dbnome = 'bd_vibecultural';
+$dbnome = 'db_vibra';
 
 $conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbnome);
 
